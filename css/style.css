@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #5895e9;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: height 0.3s, padding 0.3s;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+#header-video {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 60%;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+main {
+    padding: 0;
+}
+
+section {
+    margin: 0;
+    text-align: center;
+}
+
+#home {
+    background: url('../assets/isvicre-0.png') no-repeat center center;
+    background-size: cover; /* Görselin kaplamasını sağlar */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    height: 90vh; /* Görselin yüksekliğini ayarlamak için */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ortalamak için */
+}
+
+.home-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%; /* İçeriğin genişliğini sınırlamak için */
+    text-align: center;
+}
+
+.about-contact-wrapper {
+    background: url('../assets/isvicre-sokak.png') no-repeat center center/cover;
+    padding: 40px;
+    color: #333;
+}
+
+.about-section {
+    padding: 40px;
+}
+
+.about-section h2,
+.about-section p,
+#contact h2,
+#contact h3,
+#contact p {
+    font-family: 'Brush Script MT', cursive;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.transparent-background {
+    background-color: rgba(255, 255, 255, 0.8); /* Şeffaf beyaz arka plan */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px; /* Ortalamak ve genişliği ayarlamak için */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Sabit yükseklik */
+    object-fit: cover; /* Görseli kesmeden sığdır */
+}
+
+.card-content {
+    padding: 15px;
+    text-align: left;
+    font-family: 'Brush Script MT', cursive;
+    flex-grow: 1;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    font-size: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3.6em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: horizontal;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover p {
+    max-height: 100em;
+}
+
+.carousel {
+    position: relative;
+    margin: 20px 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+    width: 80%; /* Alanı daraltmak için */
+    margin: 0 auto; /* Ortalamak için */
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: calc(100% / 3);
+    flex: 0 0 auto;
+    margin-right: 5px; /* Boşluğu azaltmak için */
+}
+
+.carousel-slide:last-child {
+    margin-right: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(88, 149, 233, 0.5); /* Şeffaf yapmak için */
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    z-index: 1000; /* Butonların görünür olması için */
+}
+
+.carousel-button.left {
+    left: 60px; /* Daha içeri almak için */
+}
+
+.carousel-button.right {
+    right: 60px; /* Daha içeri almak için */
+}
+
+.carousel-button:hover {
+    background-color: rgba(65, 120, 169, 0.7); /* Hover efektini daha belirgin yapmak için */
+}
+
+footer {
+    background-color: #fffefe;
+    color: #ebc83a;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
